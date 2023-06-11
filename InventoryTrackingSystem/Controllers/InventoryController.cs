@@ -27,7 +27,7 @@ namespace InventoryTrackingSystem.API.Controllers
             return Ok("Kayıt Başarılı");
         }
 
-        [HttpPost("UpdateInventory")]
+        [HttpPut("UpdateInventory")]
         public InventoryTrackingApiResult UpdateInventory(InventoryUpdateRequest request)
         {
             var response = _ınventoryManager.UpdateInventory(request);
@@ -41,7 +41,7 @@ namespace InventoryTrackingSystem.API.Controllers
             }
         }
 
-        [HttpPost("DeleteInventory")]
+        [HttpDelete("DeleteInventory")]
         public InventoryTrackingApiResult DeleteInventory(long inventoryId)
         {
             var response = _ınventoryManager.DeleteInventory(inventoryId);

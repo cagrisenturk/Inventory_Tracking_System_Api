@@ -18,7 +18,7 @@ namespace InventoryTrackingSystem.API.Controllers
             _userManager = userManager;
         }
 
-        [HttpPost("Login")]
+        [HttpPut("Login")]
         public InventoryTrackingApiResult Login(UserLoginRequest user)
         {
             var response = _userManager.UserLogin(user);

@@ -28,7 +28,7 @@ namespace InventoryTrackingSystem.API.Controllers
             return Ok("Kayıt Başarılı");
         }
 
-        [HttpPost("Update")]
+        [HttpPut("Update")]
         public InventoryTrackingApiResult Update(UserUpdateRequest user)
         {
             var response = _userManager.UserUpdate(user);
@@ -42,7 +42,7 @@ namespace InventoryTrackingSystem.API.Controllers
             }
         }
 
-        [HttpPost("DeleteUser")]
+        [HttpDelete("DeleteUser")]
         public InventoryTrackingApiResult DeleteUser(long userId)
         {
             var response = _userManager.UserDelete(userId);

@@ -24,7 +24,7 @@ namespace InventoryTrackingSystem.API.Controllers
             return new InventoryTrackingApiResult { Data = data, Status = true };
         }
 
-        [HttpPost("GetInventory")]
+        [HttpGet("GetInventory")]
         public ActionResult GetInventory([FromBody]InventoryGetAndPutRequest userId,[FromQuery] long inventoryId)
         {
             
